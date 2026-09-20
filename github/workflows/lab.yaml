@@ -1,0 +1,7 @@
+name: pipeline-homologacao
+
+on:
+  workflow_dispatch:
+
+
+jobs:
