@@ -1,0 +1,30 @@
+name: pipeline-homologacao
+
+on:
+  workflow_dispatch:
+
+
+jobs:
+  lab:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Show environment
+        run: |
+          echo "Running GitHub Actions lab"
+          echo "Repository: $GITHUB_REPOSITORY"
+          echo "Branch: $GITHUB_REF_NAME"
+          echo "Runner: $RUNNER_OS"
+
+      - name: Check Git
+        run: git --version
+
+      - name: Check Python
+        run: python3 --version
+
+      - name: Run test
+        run: |
+          echo "Running laboratory test..."
+          echo "Everything is working!"
