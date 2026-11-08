@@ -1,10 +1,14 @@
 {
-  "name": "spotify-app",
+  "name": "lab-app",
   "version": "1.0.0",
-  "description": "Lab Docker + ECR + AWS",
-  "main": "src/index.js",
+  "description": "Lab GitHub Actions + Docker",
+  "main": "src/server.js",
   "scripts": {
-    "start": "node src/index.js"
+    "start": "node src/server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
   },
   "dependencies": {
     "express": "^4.19.2"
